@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gtao.demo.second.mapper.EventsLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gtao.demo.second.entity.EventsLog">
+        <id column="id" property="id" />
+        <result column="system_type" property="systemType" />
+        <result column="model_type" property="modelType" />
+        <result column="operation_type" property="operationType" />
+        <result column="nexus_id" property="nexusId" />
+        <result column="info" property="info" />
+        <result column="remarks" property="remarks" />
+        <result column="creator_id" property="creatorId" />
+        <result column="creator" property="creator" />
+        <result column="dept_id" property="deptId" />
+        <result column="department" property="department" />
+        <result column="creation_time" property="creationTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, system_type, model_type, operation_type, nexus_id, info, remarks, creator_id, creator, dept_id, department, creation_time
+    </sql>
+
+</mapper>

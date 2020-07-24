@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: gtao-demo
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8099
+
+# dev环境
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+
+gtao:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: psf
+    password: BOOT1234test
+    url: jdbc:mysql://10.8.109.10:3306/dffl_events?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+
+---
+logging:
+  level:
+    com:
+      dffl:
+        goods:
+          query:
+            domain:
+              repository: debug
